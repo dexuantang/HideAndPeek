@@ -4,5 +4,4 @@
 
 layout: home
 ---
-#Artist's statement
-    content
+Artist's statement:
