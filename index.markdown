@@ -4,7 +4,7 @@
 
 layout: home
 ---
-# Welcome
+Welcome
 
 -A Collection of Sentiments-
 
