@@ -4,6 +4,7 @@ title:  "Cloud"
 date:   2022-04-10 19:23:50 -0400
 categories: jekyll update
 ---
+```
 Creamy-white sea floating underneath a silver winged boat
   
       The ocean’s shallow waves joining the depth of the blue sky
@@ -28,3 +29,5 @@ Dimly lit moonlight soothing the ocean, the marble, the snake
 
        and the blanket, the cloud, that are now sparkling with serenity
        Regaining their energy before the sunrise
+
+```
