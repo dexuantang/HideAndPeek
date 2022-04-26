@@ -20,7 +20,7 @@ Walking around an object, perhaps your pen, keep your eye on it. What you see at
 
 Sitting by a campfire, watching the glowing amber, hearing the crackle, feeling the heat, smelling the burning ashes under the stary night. Watching objects as far as lightyears away: the Orion, the Arcturus, the Galactic Center, the Vega, the Capella, the Mars, the Mercury, the Moon… We are watching an image of their past, we are standing in the present, we can expand on their stories. 
 
-Maybe the future is chaos, and we will never walk out of the dystopia. Or maybe everything will be just fine. All I can do is enjoy the present to jot my thoughts down.
+Maybe the future is chaos, and we will never walk out of the dystopia. Or maybe everything will be just fine. All I can do is enjoy the present and jot my thoughts down.
 
 
 # Cloud 
