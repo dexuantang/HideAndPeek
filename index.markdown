@@ -52,34 +52,39 @@ Dimly lit moonlight soothing the ocean, the marble, the snake
 ```
 # Back Pain
 ```
-This is my spine
+   This is my spine
 26 vertebrae supporting my body
-A few are probably displaced
-Strands of back muscles hugging it
-Screaming in pain from the pressure
+  A few are probably displaced
+    Strands of back muscles hugging it
+       Screaming
+         Screaming in pain from the pressure
 
-“Just don’t slouch so much!”
-Yes, this is the problem!
-Or is it? 
+         “Just don’t slouch so much!”
+          “Just sit straight”
+           Yes, this is the problem!
+          Or is it?
 
-This is my brain
-Attached to the very end of my spinal cord
-It tells the muscles to stretch
-So, my height won’t stand out
-And no one will ask me again:
+         This is my brain
+        Attached to the very end of my spinal cord
+      It tells the muscles to relax
+    So, my height won’t stand out
+   Hiding
+  Hiding from the words like
 
-“Oh, you are so tall you must play basketball.”
-It seems to be a complement
-But why am I hiding from it?
+“Wow, you are so tall!”
+“You must play basketball!”
+  All seemingly compliments
+  But why am I hiding from it?
 
-My brain tells my back muscles:
-“You can relax, hide the height, once more
-let the spine stress the muscles
-let the body suffer
-So, I, the brain, can feel better.”
+   My brain tells my back muscles:
+   “You can relax, once more
+    let the spine stress the muscles
+          let the body appear shorter
+          Although the spine suffers
+             I, the brain, can feel better.”
 ```
 
-## The Moon, Too
+# The Moon, Too
 ```
 Apep scrolls pass an app with a black icon as he walks down the six lanes stroad of Moon Colony Two wearing his Far Side Surveyor’s badge.
 His phone’s news feed keeps reminding him about people’s endless debate on the newly proposed ban on Moon resident’s exploration into the 
@@ -92,7 +97,7 @@ themselves the “Lunarians”. The loading screen of the app with the black ico
 inches forward in its circumference as it plots its revolt with the Lunarians and the moon, too.
 ```
 
-## Schedule
+# Schedule
 ```Monday–
 
 965 Commonwealth Ave.
@@ -150,4 +155,37 @@ Taste of my sweat.
 Pressure in the vice
 
 Joy of har work.
+```
+
+# Deep Sky Objects
+```
+Looking up the starry night:
+
+The Mars, the Venus,
+
+The Mimosa, the Vega,
+
+The Milky Way, the Virgo A.
+
+Tiny specks of dust in the sky.
+
+ 
+
+Observing from the present:
+
+Photons from light years away,
+
+Sensed by my retina,
+
+Images of a distant world,
+
+Of as far as 2.5 million years in the past.
+
+ 
+
+Is someone faraway also looking at the Earth’s past?
+
+Looking at an Earth before life,
+
+And believing they are alone in this universe?
 ```
