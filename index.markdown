@@ -86,15 +86,22 @@ Dimly lit moonlight soothing the ocean, the marble, the snake
 
 # The Moon, Too
 ```
-Apep scrolls pass an app with a black icon as he walks down the six lanes stroad of Moon Colony Two wearing his Far Side Surveyor’s badge.
-His phone’s news feed keeps reminding him about people’s endless debate on the newly proposed ban on Moon resident’s exploration into the 
-deeper space. He thinks to himself "The Democratic Republic of Earth’s bureaucracy sure is unchanged." In the past 15 years, the moon has 
-become the hub of interplanetary colonization. The establishment of The Moon Colony One in 2050 marked the end of the World War III. 
-People believed humans would finally unite once and for all as the construction of Moon Two and Moon Three went on in the following two decade.
-However, the expansion on the moon stopped at the edge of the back of the moon because the explorers who came back lost all their attachment to
-the Earth. Their memories of the old world, their will to ever come back to the Earth were all erased by the void. Those explorers now call
-themselves the “Lunarians”. The loading screen of the app with the black icon appears. The loading circle spins in suspension. The darkness 
-inches forward in its circumference as it plots its revolt with the Lunarians and the moon, too.
+Apep scrolls pass an app with a black icon as he walks down the six lanes stroad of 
+Moon Colony Two wearing his Far Side Surveyor’s badge. His phone’s news feed 
+keeps reminding him about people’s endless debate on the newly proposed ban on 
+Moon resident’s exploration into the deeper space. He thinks to himself 
+"The Democratic Republic of Earth’s bureaucracy sure is unchanged." 
+In the past 15 years, the moon has become the hub of interplanetary colonization. 
+The establishment of The Moon Colony One in 2050 marked the end of the World War III. 
+People believed humans would finally unite once and for all as the construction of 
+Moon Two and Moon Three went on in the following two decade. However, the 
+expansion on the moon stopped at the edge of the back of the moon because 
+the explorers who came back lost all their attachment to the Earth. Their memories 
+of the old world, their will to ever come back to the Earth were all erased by the void. 
+Those explorers now call themselves the “Lunarians”. The loading screen of the app with 
+the black icon appears. The loading circle spins in suspension. The darkness 
+inches forward in its circumference as it plots its revolt with the Lunarians and
+the moon, too.
 ```
 
 # Schedule
@@ -159,11 +166,13 @@ Joy of har work.
 # Roadkill
 CW: Description of animal death.
 ```
-You were dead by the time I looked in my mirror. In front of you are streak of blood red as a spilled bottle of ketchup. 
-Your unrecognizable carcass slowly decomposing into a ball of fur and meat were flies will land on you and eat. 
-Before you crossed this highway, you lived free in the deep wood or the open sky where you once raced and glid. 
-Perhaps you live in the city, in dumpsters and sewer pipes where you scavenged and dived. 
-But now, hundreds of cars passing by you, watching you as you die. 
+You were dead by the time I looked in my mirror. In front of you are 
+streak of blood red as a spilled bottle of ketchup. Your unrecognizable 
+carcass slowly decomposing into a ball of fur and meat were flies will 
+land on you and eat. Before you crossed this highway, you lived free in
+the deep wood or the open sky where you once raced and glid. Perhaps you 
+live in the city, in dumpsters and sewer pipes where you scavenged and 
+dived. But now, hundreds of cars passing by you, watching you as you die. 
 
 Little ball of fur and meat, Goodbye.
 ```
