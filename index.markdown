@@ -160,32 +160,18 @@ Joy of har work.
 # Deep Sky Objects
 ```
 Looking up the starry night:
-
 The Mars, the Venus,
-
 The Mimosa, the Vega,
-
 The Milky Way, the Virgo A.
-
 Tiny specks of dust in the sky.
-
  
-
 Observing from the present:
-
 Photons from light years away,
-
 Sensed by my retina,
-
 Images of a distant world,
-
 Of as far as 2.5 million years in the past.
 
- 
-
 Is someone faraway also looking at the Earth’s past?
-
 Looking at an Earth before life,
-
 And believing they are alone in this universe?
 ```
