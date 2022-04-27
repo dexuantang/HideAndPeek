@@ -50,3 +50,31 @@ Dimly lit moonlight soothing the ocean, the marble, the snake
        and the blanket, the cloud, that are now sparkling with serenity
        Regaining their energy before the sunrise
 ```
+# Back Pain
+```
+This is my spine
+26 vertebrae supporting my body
+A few are probably displaced
+Strands of back muscles hugging it
+Screaming in pain from the pressure
+
+“Just don’t slouch so much!”
+Yes, this is the problem!
+Or is it? 
+
+This is my brain
+Attached to the very end of my spinal cord
+It tells the muscles to stretch
+So, my height won’t stand out
+And no one will ask me again:
+
+“Oh, you are so tall you must play basketball.”
+It seems to be a complement
+But why am I hiding from it?
+
+My brain tells my back muscles:
+“You can relax, hide the height, once more
+let the spine stress the muscles
+let the body suffer
+So, I, the brain, can feel better.”
+```
