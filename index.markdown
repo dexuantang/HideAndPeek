@@ -156,6 +156,17 @@ Pressure in the vice
 
 Joy of har work.
 ```
+# Roadkill
+CW: Description of animal death.
+```
+You were dead by the time I looked in my mirror. In front of you are streak of blood red as a spilled bottle of ketchup. 
+Your unrecognizable carcass slowly decomposing into a ball of fur and meat were flies land on you and eat. 
+Before you crossed this highway, you lived free in the deep wood or the open sky where you once raced and glid. 
+Perhaps you live in the city, in dumpsters and sewer pipes where you scavenged and dived. 
+But now, hundreds of cars passing by you, watched you die. 
+
+Little ball of fur and meat, Goodbye.
+```
 
 # Deep Sky Objects
 ```
