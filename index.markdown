@@ -160,7 +160,7 @@ Joy of har work.
 CW: Description of animal death.
 ```
 You were dead by the time I looked in my mirror. In front of you are streak of blood red as a spilled bottle of ketchup. 
-Your unrecognizable carcass slowly decomposing into a ball of fur and meat were flies land on you and eat. 
+Your unrecognizable carcass slowly decomposing into a ball of fur and meat were flies will land on you and eat. 
 Before you crossed this highway, you lived free in the deep wood or the open sky where you once raced and glid. 
 Perhaps you live in the city, in dumpsters and sewer pipes where you scavenged and dived. 
 But now, hundreds of cars passing by you, watching you as you die. 
