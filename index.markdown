@@ -105,63 +105,36 @@ the moon, too.
 ```
 
 # Schedule
-```Monday–
-
+```
+Monday–
 965 Commonwealth Ave.
-
 Scent of Goodwill.
-
 Stacks of used belongings,
-
 Pages in a story book.
 
- 
-
 Tuesday -
-
 Sidewalk of Institute Rd.
-
 Movement of wind.
-
 Vibration of light poles,
-
 Harmonics of waves.
 
- 
-
 Wednesday-
-
 AK227, Atwater Kent.
-
 Values of resistors.
-
 Layers of dense wires,
-
 Mess in my logic.
 
- 
-
 Thursday-
-
 Left lane on 290 East.
-
 Roar of engine.
-
 Last turn of the drive.
-
-Urge of getting home.
-
- 
+Urge to get home.
 
 Friday-
-
 Basement of Kaven.
-
 Taste of my sweat.
-
 Pressure in the vice
-
-Joy of har work.
+Joy of hard work.
 ```
 # Roadkill
 CW: Description of animal death.
@@ -175,6 +148,20 @@ live in the city, in dumpsters and sewer pipes where you scavenged and
 dived. But now, hundreds of cars passing by you, watching you as you die. 
 
 Little ball of fur and meat, Goodbye.
+```
+
+```
+Three maple trees standing in my dad’s front yard. He once said, 
+“The three maple trees are also people who live in this home” 
+Not long after that, the pandemic hit. Then a storm took down the 
+weakest tree standing alone in the corner and cut the branch that 
+connected the other two trees together. The once dense branches that 
+hug each other now has a giant gap between them like the Pacific Ocean 
+that is standing between me and my family. One day, the stomp of the fallen 
+tree grew sprout. The branches of the other two trees are also slowly growing 
+back. The house right next to the trees still stands, despite being much 
+quieter. It has became our home since the day my family moved in and it will
+always wait for my family to reunite one day. 
 ```
 
 # Deep Sky Objects
