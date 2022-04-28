@@ -16,7 +16,7 @@ We often ignore the most simple things we see, hear, smell, feel, and tase in li
 Walking around an object, perhaps your pen, keep your eye on it. What you see at any given moment is only a two-dimensional image of the shape of a pen. However, the human brain can stich thousands of these images together and realize the object you are seeing is a pen. Moreover, you realize the pen is made of metal, it is for writing, and maybe you have some sentiments attached to it. Perhaps you can also see the pen as a pathway to express these sentiments and see yourself picking it up in the next moment to write something. This ability to extrapolate is amazing, isn’t it?
 
 
--A Planetarium-
+-An Observatory-
 
 Sitting by a campfire, watching the glowing amber, hearing the crackle, feeling the heat, smelling the burning ashes under the stary night. Watching objects as far as lightyears away: the Orion, the Arcturus, the Galactic Center, the Vega, the Capella, the Mars, the Mercury, the Moon… We are watching an image of their past, we are standing in the present, we can expand on their stories. 
 
