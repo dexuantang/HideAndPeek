@@ -125,16 +125,16 @@ Layers of dense wires,
 Mess in my logic.
 
 Thursday-
-Left lane on 290 East.
-Roar of engine.
-Last turn of the drive.
-Urge to get home.
-
-Friday-
 Basement of Kaven.
 Taste of my sweat.
 Pressure in the vice
 Joy of hard work.
+
+Friday-
+Left lane on 290 East.
+Roar of engine.
+Last turn of the drive.
+Urge to get home.
 ```
 # Roadkill
 CW: Description of animal death.
