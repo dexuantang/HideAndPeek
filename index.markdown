@@ -8,7 +8,7 @@ Welcome to where I observe things and write about them.
 
 -A Collection of Sentiments-
 
-We often ignore the most simple things we see, hear, smell, feel, and taste in life. However, these senses are what make up of the meaning of being alive. Experiencing the senses, the feelings associated with these senses, and the anticipation of what the senses could be are what my writings focused on. On the surface, we see the colors and textures of the cloud, we hear the squealing of tires, we smell the scent of used things, we feel our spine touching the chair, and we taste the sweat of hard work. In our heart, we feel the serenity of nature, we think about the horror of possibly ruing over something, we read the story behind objects, we reflect on our habits, and we celebrate the process to our achievements. 
+We often ignore the most simple things we see, hear, smell, feel, and taste in life. However, these senses are what make up of the meaning of being alive. Experiencing the senses, the feelings associated with these senses, and the anticipation of what the senses could be are what my writings focused on. On the surface, we see the colors and textures of the cloud, we hear the squealing of tires, we smell the scent of used things, we feel our spine touching the chair, and we taste the sweat of hard work. In our heart, we feel the serenity of nature, we think about the horror of possibly ruing over something, we read the story behind objects, we reflect on our habits, and we celebrate the process to our achievements. Let's do an experiment.
 
 
 -An Experiment-
