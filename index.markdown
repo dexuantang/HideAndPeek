@@ -3,8 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-image1: /assets/bootesedited.jpg
-
+image1: /en2219-portfolio/assets/bootesedited.jpg
 
 ---
 ![ ]({{ page.image1 }})
