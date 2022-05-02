@@ -139,14 +139,17 @@ Urge to get home.
 # Roadkill
 CW: Description of animal death.
 ```
-You were dead by the time I looked in my mirror. In front of you are 
-streaks of blood red as a spilled bottle of ketchup. Your unrecognizable 
-carcass slowly decomposing into a ball of fur and meat where flies will 
-land on you and eat. Before you crossed this highway, you lived free in
-the deep wood or the open sky where you once raced and glid. Perhaps you 
-live in the city, in dumpsters and sewer pipes where you scavenged and 
-dived. But now, hundreds of cars passing by you, watching you as you die. 
+You were dead by the time I looked in my mirror. 
+streaks of blood red as a spilled bottle of ketchup. 
+carcass slowly decomposing into a ball of fur and meat 
+where flies will land on you and eat.
+Before you crossed this highway, you lived free
+in the deep wood or the open sky where you once raced and glid. 
+Perhaps you live in the city, 
+in dumpsters and sewer pipes where you scavenged and dived. 
 
+But now, hundreds of cars passing by you, 
+watching you as you die. 
 Little ball of fur and meat, Goodbye.
 ```
 # My Home
