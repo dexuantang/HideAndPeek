@@ -164,7 +164,7 @@ that is standing between me and my family. One day, the stomp of the fallen
 tree grew sprout. The branches of the other two trees are also slowly growing 
 back. The house right next to the trees still stands, despite being much 
 quieter. It has became our home since the day my family moved in and it will
-always wait for my family to reunite one day. 
+always wait for my family to reunite some day. 
 ```
 
 # Deep Sky Objects
