@@ -183,7 +183,7 @@ Of as far as 2.5 million years in the past.
 
 To extraterrestrial lives:
 Are you also looking at the Earth’s past?
-Perhaps Looking at an Earth before life,
+Perhaps looking at an Earth before life,
 When lava filled the ocean?
 And believing you are alone in this universe?
 ```
