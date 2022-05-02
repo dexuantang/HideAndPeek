@@ -178,7 +178,9 @@ Sensed by my retina,
 Images of a distant world,
 Of as far as 2.5 million years in the past.
 
-Is someone faraway also looking at the Earth’s past?
-Looking at an Earth before life,
-And believing they are alone in this universe?
+To extraterrestrial lives:
+Are you also looking at the Earth’s past?
+Perhaps Looking at an Earth before life,
+When lava filled the ocean?
+And believing you are alone in this universe?
 ```
