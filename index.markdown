@@ -181,7 +181,7 @@ Sensed by my retina,
 Images of a distant world,
 Of as far as 2.5 million years in the past.
 
-To extraterrestrial lives:
+To extraterrestrial life:
 Are you also looking at the Earth’s past?
 Perhaps looking at an Earth before life,
 When lava still filled the ocean?
