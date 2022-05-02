@@ -17,14 +17,14 @@ We often ignore the most simple things we see, hear, smell, feel, and taste in l
 
 -An Experiment-
 
-Walking around an object, perhaps your pen, keep your eye on it. What you see at any given moment is only a two-dimensional image of the shape of a pen. However, the human brain can stich thousands of these images together and realize the object you are seeing is a pen. Moreover, you realize the pen is made of metal, it is for writing, and maybe you have some sentiments attached to it. Perhaps you can also see the pen as a pathway to express these sentiments and see yourself picking it up in the next moment to write something. Why not use this amazing ability to create something.
+Walking around an object, perhaps your pen, keep your eye on it. What you see at any given moment is only a two-dimensional image of the shape of a pen. However, the human brain can stich thousands of these images together and realize the object you are seeing is a pen. Moreover, you realize the pen is made of metal, it is for writing, it still has ink in it, and maybe you have some sentiments attached to it. Maybe it's a gift from your significant other. Perhaps you can also see the pen as a pathway to express these sentiments and see yourself picking it up in the next moment to write something on these sentiments. Why not use this amazing ability of being able to see an object holistically to create something?
 
 
 -An Observatory-
 
-Sitting by a campfire, watching the glowing amber, hearing the crackle, feeling the heat, smelling the burning ashes as they rise up into the sky above. Raising my head, Watching objects as far as millions of lightyears away: the Orion, the Arcturus, the Galactic Center, the Vega, the Capella, the Mars, the Mercury, the Moon, the Andromeda Galaxy… We are watching an image of their past, we are standing in the present, we can imagine their future.
+Sitting by a campfire, watching the glowing amber, hearing the crackle, feeling the heat, smelling the burning ashes as they rise up into the sky above. Raising my head, Watching objects as far as millions of lightyears away: the Orion, the Arcturus, the Galactic Center, the Vega, the Capella, the Mars, the Mercury, the Moon, the Andromeda Galaxy… We are watching an image of their past, we are standing in the present, we can imagine their, and our future.
 
-Maybe our future is chaos, and we will never walk out of the dystopia. Maybe the Sirius has gone supernova, and our lives will end in a bright flash of light 5 years from noe. Or maybe everything will be just fine. All I can do jot down my observations and thoughts of the present. 
+Maybe our future is chaos, and we will never walk out of the dystopia. Maybe the Sirius has gone supernova, and our lives will end in a bright flash of light 5 years from now. Or maybe everything will be just fine. All I can do jot down my observations and thoughts on these most common objects and events in the present.
 
 
 
