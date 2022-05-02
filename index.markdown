@@ -145,7 +145,7 @@ carcass slowly decomposing into a ball of fur and meat
 where flies will land on you and eat.
 Before you crossed this highway, you lived free
 in the deep wood or the open sky where you once raced and glid. 
-Perhaps you live in the city, 
+Perhaps you live in a city, 
 in dumpsters and sewer pipes where you scavenged and dived. 
 
 But now, hundreds of cars passing by you, 
