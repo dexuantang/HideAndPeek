@@ -174,7 +174,7 @@ always wait for my family to reunite some day.
 
 # Deep Sky Objects
 ```
-Looking up the starry night:
+Looking at the starry night:
 The Mars, the Venus,
 The Mimosa, the Vega,
 The Milky Way, the Virgo A.
