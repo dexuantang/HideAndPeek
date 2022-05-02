@@ -181,7 +181,7 @@ The Milky Way, the Virgo A.
 Tiny specks of dust in the sky.
  
 Observing from the present:
-Photons from light years away,
+Photons from light-years away,
 Sensed by my retina,
 Images of a distant world,
 Of as far as 2.5 million years in the past.
