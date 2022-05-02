@@ -3,7 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+image1: /assets/bootesedited.jpg
+
+
 ---
+![ ]({{ page.image1 }})
+
 Welcome to where I observe things and write about them.
 
 -A Collection of Sentiments-
@@ -21,6 +26,7 @@ Walking around an object, perhaps your pen, keep your eye on it. What you see at
 Sitting by a campfire, watching the glowing amber, hearing the crackle, feeling the heat, smelling the burning ashes as they rise up into the sky above. Raising my head, Watching objects as far as millions of lightyears away: the Orion, the Arcturus, the Galactic Center, the Vega, the Capella, the Mars, the Mercury, the Moon, the Andromeda Galaxy… We are watching an image of their past, we are standing in the present, we can imagine their future.
 
 Maybe our future is chaos, and we will never walk out of the dystopia. Maybe the Sirius has gone supernova, and our lives will end in a bright flash of light 5 years from noe. Or maybe everything will be just fine. All I can do jot down my observations and thoughts of the present. 
+
 
 
 # Cloud 
