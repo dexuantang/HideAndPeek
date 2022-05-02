@@ -184,6 +184,6 @@ Of as far as 2.5 million years in the past.
 To extraterrestrial lives:
 Are you also looking at the Earth’s past?
 Perhaps looking at an Earth before life,
-When lava filled the ocean?
+When lava still filled the ocean?
 And believing you are alone in this universe?
 ```
