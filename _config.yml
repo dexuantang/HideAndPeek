@@ -18,12 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Observatory
+title: Motion Activated Interactive Information Board
 
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my site for my writings produced in EN2219.
+  Hi, this display was designed by B-term 2022 ECE 2799 Team 2.
+  We are: Qihan He, Guan Lin, and Dexuan Tang
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dexuantang.github.io/en2219-portfolio/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dexuantang.github.io/MA-IIB" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
