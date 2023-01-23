@@ -17,6 +17,7 @@ image1: /HideAndPeek/assets/nvidia.png
 Games will be streamed on the following Twitch links at times in the schedule at the bottom of this page
 
 [client1](https://www.twitch.tv/fpsci_client_1)
+
 [client2](https://www.twitch.tv/fpsci_client_2)
 
 ## The Tournament:
