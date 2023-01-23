@@ -8,7 +8,7 @@ image1: /HideAndPeek/assets/nvidia.png
 
 ---
 
-## Our Sponsor:
+## Sponsored by:
 
 ![ ]({{ page.image1 }})
 
