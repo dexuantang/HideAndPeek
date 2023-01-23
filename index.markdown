@@ -7,10 +7,9 @@ image1: /HideAndPeek/assets/nvidia.png
 
 
 ---
-
----
-title: Sponsored by:
----
+<span style="color:black;font-weight:700;font-size:32px"> 
+Sponsored by:
+</span>
 
 ![ ]({{ page.image1 }})
 
