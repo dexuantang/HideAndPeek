@@ -23,7 +23,7 @@ title: Nvidia's FPSci "Hide and Peek" Tournament
 description: >- # this means to ignore newlines until "baseurl:"
   Hi, we are holding a tournament of the game FPSci
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dexuantang.github.io/HideAndPeek" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dexuantang.github.io/HideAndPeek/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
