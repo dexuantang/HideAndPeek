@@ -27,7 +27,7 @@ url: "https://dexuantang.github.io/HideAndPeek" # the base hostname & protocol f
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: Midnight
 #remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-feed
