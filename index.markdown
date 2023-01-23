@@ -7,9 +7,17 @@ image1: /HideAndPeek/assets/nvidia.png
 
 
 ---
+
 # Our Sponsor:
 
 ![ ]({{ page.image1 }})
+
+# Twitch Stream Links:
+
+Games will be streamed on the following Twitch links at times in the schedule at the bottom of this page
+
+https://www.twitch.tv/fpsci_client_1
+https://www.twitch.tv/fpsci_client_2
 
 # The Tournament:
 
@@ -18,9 +26,7 @@ image1: /HideAndPeek/assets/nvidia.png
 - The final winner will win the tournament and will receive an RTX 3090 provided by our sponsor, Nvidia, as the prize.
 <iframe src="https://challonge.com/q7xbgskb/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
-# Schedule/Progress:
+# Schedule:
 
-The schedule for matches and the current progress is shown below.
+Go to this link to view game schedule: https://www.slottr.com/sheets/18274644
 
-<div id='slottr-sheet-18274644'></div>
-<script type='text/javascript' src='https://www.slottr.com/sheets/18274644.js'></script>
