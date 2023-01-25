@@ -4,7 +4,6 @@
 
 layout: home
 image1: /HideAndPeek/assets/nvidia.png
-image1: /HideAndPeek/assets/WPI.png
 
 
 ---
@@ -15,7 +14,6 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ## Sponsored by:
 
 ![ ]({{ page.image1 }})
-![ ]({{ page.image2 }})
 
 ## The Game:
 - Players will be peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
