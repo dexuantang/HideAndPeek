@@ -4,6 +4,7 @@
 
 layout: home
 image1: /HideAndPeek/assets/nvidia.png
+image1: /HideAndPeek/assets/WPI.png
 
 
 ---
@@ -14,6 +15,14 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ## Sponsored by:
 
 ![ ]({{ page.image1 }})
+![ ]({{ page.image2 }})
+
+## The Game:
+- Players will be peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
+- Their goal is to score as many points as possible by targeting the other player. Each hit worths one point.
+- The tournament is single elimination shown in the following bracket. The player with the higher total score is the winner and will proceed to the next round.
+- The final winner receives a graphics card provided by our sponsor, Nvidia, as the prize.
+<iframe src="https://challonge.com/q7xbgskb/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 ## Twitch Stream Links:
 
@@ -23,14 +32,8 @@ Games will be streamed on the following Twitch links at times in the schedule at
 
 [client2](https://www.twitch.tv/fpsci_client_2)
 
-## The Tournament:
+## Next Match:
 
-- Players are peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
-- The tournament is single elimination shown in the following bracket. The winner of each match will proceed to the next round.
-- The final winner receives a graphics card provided by our sponsor, Nvidia, as the prize.
-<iframe src="https://challonge.com/q7xbgskb/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-
-## Schedule:
-
-Go to this link to view game schedule: [slottr](https://www.slottr.com/sheets/18274644)
+James Ly, Alexander Lap:
+3:30PM Wednesday 1/25/2023 
 
