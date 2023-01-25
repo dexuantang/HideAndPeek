@@ -18,10 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Nvidia's FPSci "Hide and Peek" Tournament
+title: ""
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi, we are holding a tournament of the game FPSci
+  Zesheng Chen, Colin Mettler, Dexuan Tang, 
+  Exploring the Effect of Network Latency on Peeking in FPS Games,
+  Interactive Qualification Project. Worcester Polytechnic Institute.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dexuantang.github.io/HideAndPeek/" # the base hostname & protocol for your site, e.g. http://example.com
 

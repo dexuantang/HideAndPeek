@@ -8,8 +8,10 @@ image1: /HideAndPeek/assets/nvidia.png
 
 ---
 <span style="color:black;font-weight:700;font-size:32px"> 
-Sponsored by:
+Nvidia's FPSci "Hide and Peek" Tournament
 </span>
+
+## Sponsored by:
 
 ![ ]({{ page.image1 }})
 
@@ -23,9 +25,9 @@ Games will be streamed on the following Twitch links at times in the schedule at
 
 ## The Tournament:
 
-- Players will be peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
-- The tournament will be single elimination shown in the following bracket. The winner of each match will proceed to the next round.
-- The final winner will win the tournament and will receive an RTX 3090 provided by our sponsor, Nvidia, as the prize.
+- Players are peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
+- The tournament is single elimination shown in the following bracket. The winner of each match will proceed to the next round.
+- The final winner receives a graphics card provided by our sponsor, Nvidia, as the prize.
 <iframe src="https://challonge.com/q7xbgskb/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 ## Schedule:
