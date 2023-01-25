@@ -25,10 +25,10 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ## Twitch Stream Links:
 ### Next Match: James Ly, Alexander Lap 3:30PM Wednesday 1/25/2023 
 
-Games will be streamed on the following Twitch links at times in the schedule at the bottom of this page
+Games will be streamed using the following Twitch links
 
-[client1](https://www.twitch.tv/fpsci_client_1)
+[player 1](https://www.twitch.tv/fpsci_client_1)
 
-[client2](https://www.twitch.tv/fpsci_client_2)
+[player 2](https://www.twitch.tv/fpsci_client_2)
 
 ## 
