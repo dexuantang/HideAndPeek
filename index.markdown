@@ -16,7 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next Match: James Ly, Alexander Lap 3:30PM Wednesday 1/25/2023 
+### Next Match: Carson G, Naomi Treto 4:00PM Wednesday 1/25/2023 
 
 Games will be streamed using the following Twitch links
 
