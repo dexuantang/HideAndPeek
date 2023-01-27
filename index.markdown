@@ -16,7 +16,9 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next Match: Carson G, Naomi Treto 4:00PM Wednesday 2/1/2023 
+### Next Match: Zach Winston, Shiming De 5:00PM Mon 1/30/2023
+
+Carson G, Naomi Treto 4:00PM Wed 2/1/2023 
 
 Games will be streamed using the following Twitch links
 
