@@ -27,6 +27,7 @@ Games will be streamed using the following Twitch links
 [player 2](https://www.twitch.tv/fpsci_client_2)
 
 ## The Game:
+- There are 54 rounds. Each round win awards 1 point to the winner. Ties award no points. The numbers to the right of player names on finished matches indicate player scores.
 - Players will be peekers and corner holders in a custom FPS game "FPSci" ([Link to repository](https://github.com/NVlabs/FPSci))
 - Their goal is to score as many points as possible by targeting the other player. Each hit worths one point.
 - The tournament is single elimination shown in the following bracket. The player with the higher total score is the winner and will proceed to the next round.
