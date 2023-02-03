@@ -16,9 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Carson G, Naomi Treto 4:00PM Wed 2/1/2023
-
-Ryan Darcey, Jacob Burns 1:30 PM Thu 2/2/2023
+### Next match: Round 2: Carson, Gabriel 3:00PM Wed 2/8/2023
 
 Games will be streamed using the following Twitch links
 
