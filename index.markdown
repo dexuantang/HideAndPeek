@@ -16,9 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next match: Round 2:  Zachary, Jacob  Wed, Feb 8 at 12:00 PM 
-Alexander, Jonathan  Wed, Feb 8 at 2:00 PM 
-Gabriel, Carson Wed, Feb 8 at 3:00 PM 
+### Next match: TBA
 
 
 Games will be streamed using the following Twitch links
