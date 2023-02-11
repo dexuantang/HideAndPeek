@@ -164,22 +164,30 @@ def hit_converter (time_hits, player_time):
     hit_arr = np.pad(hit_arr, (((len(player_time) - len(hit_arr)) ,0)), 'constant', constant_values = (-1,-1))
     return hit_arr
 
-def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.5):
+def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.005):
     ## arrs are player_data 
     ##unfinished
     ## this is a function that should be able to match up the time stamps for summing the angles
     result = []
     for i in range(arr1.shape[1]):
         angle_sum = arr1[0, i]
-        original_index = i
-        for j in range(arr2.shape[0]):
+        for j in range(arr2.shape[1]):
             time_diff = abs((arr2[1, j] - arr1[1, i]).total_seconds())
-            if time_diff < time_threshold:
+            if time_diff <= time_threshold:
                 angle_sum += arr2[0, j]
-                original_index = j
+                time_at_sum = arr2[1, i]
                 break
-        result.append((original_index, angle_sum))
+        result.append((time_at_sum, angle_sum))
     return np.array(result)
+
+def split_log (player_data):
+    round_list = []
+    for i in range(54):
+        index = np.where(player_data[2, :] == i)
+        nround = player_data[: , index[0]]
+        round_list.append(nround)
+    return round_list
+
 
 
 player1_coor = read_player_coor(file_path_1)
@@ -203,10 +211,11 @@ player2_round_id = read_round_id (server_data_peeker, player2_time, client2_id)[
 player2_role = read_round_id (server_data_peeker, player2_time, client2_id)[1]
 player2_data = np.array([np.array(player2_angles), np.array(player2_time), np.array(player2_round_id), np.array(player2_role), np.array(hit_arr_2)])
 
-x = sum_angles_near_timestamp(player1_data, player2_data)
+player1_data_rounds = split_log(player1_data)
+player2_data_rounds = split_log(player2_data)
 
-            
-            
+y = sum_angles_near_timestamp(player1_data_rounds[2], player2_data_rounds[2])
+         
             
 
     
