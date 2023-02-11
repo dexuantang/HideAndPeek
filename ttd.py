@@ -94,9 +94,9 @@ def angle_calculation(corner_coor, player_coor):
     ## the sign of the output may not be correct
     list_of_angle = []
     for row in player_coor:
-        dx = corner_coor[0] - row[0]
-        dy = corner_coor[1] - row[1]
-        angle = math.atan2(dy, dx)
+        dx = abs(corner_coor[0] - row[0])
+        dy = abs(corner_coor[1] - row[1])
+        angle = math.atan(dx/dy)
         list_of_angle.append(angle)
     return list_of_angle
     
@@ -164,7 +164,7 @@ def hit_converter (time_hits, player_time):
     hit_arr = np.pad(hit_arr, (((len(player_time) - len(hit_arr)) ,0)), 'constant', constant_values = (-1,-1))
     return hit_arr
 
-def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.005):
+def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.007):
     ## arrs are player_data 
     ##unfinished
     ## this is a function that should be able to match up the time stamps for summing the angles
@@ -174,7 +174,7 @@ def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.005):
         for j in range(arr2.shape[1]):
             time_diff = abs((arr2[1, j] - arr1[1, i]).total_seconds())
             if time_diff <= time_threshold:
-                angle_sum += arr2[0, j]
+                angle_sum -= arr2[0, j]
                 time_at_sum = arr2[1, i]
                 break
         result.append((time_at_sum, angle_sum))
