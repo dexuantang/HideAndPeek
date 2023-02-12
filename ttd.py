@@ -5,6 +5,7 @@ from tkinter import filedialog
 import math
 from datetime import datetime, timedelta
 import numpy as np
+from scipy.signal import argrelextrema
 
 corner_coor = [28.5,46] #corner coordinate for calculating player's angle between the wall 
 #get the latest time stamp where the sum of the angle of the two players equals to pi/2 
@@ -171,13 +172,14 @@ def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.007):
     result = []
     for i in range(arr1.shape[1]):
         angle_sum = arr1[0, i]
+        time_at_sum = arr1[1, i]
         for j in range(arr2.shape[1]):
             time_diff = abs((arr2[1, j] - arr1[1, i]).total_seconds())
             if time_diff <= time_threshold:
                 angle_sum -= arr2[0, j]
-                time_at_sum = arr2[1, i]
+                time_at_sum = arr2[1, j]
                 break
-        result.append((time_at_sum, angle_sum))
+        result.append((time_at_sum, abs(angle_sum)))
     return np.array(result)
 
 def split_log (player_data):
@@ -187,6 +189,32 @@ def split_log (player_data):
         nround = player_data[: , index[0]]
         round_list.append(nround)
     return round_list
+
+def tlos (angle_sums_time, angle_threshold = 0.004):
+    result = []
+    peek_time = 0
+    for i in range(angle_sums_time.shape[0]):
+        if abs(angle_sums_time[i, 1]) <= angle_threshold:
+            peek_time = angle_sums_time[i, 0]
+            result.append((peek_time, angle_sums_time[i, 1]))
+    # min_idx = argrelextrema((angle_sums_time[:,1]), np.less)
+    # peek_time = angle_sums_time[min_idx, 0]
+    # result_unfiltered = np.vstack((peek_time, (angle_sums_time[min_idx, 1])))
+    # result = result_unfiltered[:, (result_unfiltered[1, :] <= angle_threshold)]
+    return result
+
+def thits (player1_data_round, player2_data_round):
+    result = []
+    p1_index = np.where(player1_data_round[4, :] == 'hit')
+    p1_result = player1_data_round[:, p1_index[0]]
+    p2_index = np.where(player2_data_round[4, :] == 'hit')
+    p2_result = player2_data_round[:, p2_index[0]]
+    unsorted = np.hstack((p1_result, p2_result))
+    result = unsorted[:, np.argsort(unsorted[1, :])]
+    return result
+
+#def ttd(tlos, thits):
+    
 
 
 
@@ -214,8 +242,9 @@ player2_data = np.array([np.array(player2_angles), np.array(player2_time), np.ar
 player1_data_rounds = split_log(player1_data)
 player2_data_rounds = split_log(player2_data)
 
-y = sum_angles_near_timestamp(player1_data_rounds[2], player2_data_rounds[2])
-         
+y = sum_angles_near_timestamp(player1_data_rounds[35], player2_data_rounds[35])
+z = tlos(y)
+w = thits(player1_data_rounds[35], player2_data_rounds[35])
             
 
     
