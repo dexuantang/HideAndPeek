@@ -201,7 +201,7 @@ def tlos (angle_sums_time, angle_threshold = 0.004):
     # peek_time = angle_sums_time[min_idx, 0]
     # result_unfiltered = np.vstack((peek_time, (angle_sums_time[min_idx, 1])))
     # result = result_unfiltered[:, (result_unfiltered[1, :] <= angle_threshold)]
-    return result
+    return np.array(result)
 
 def thits (player1_data_round, player2_data_round):
     result = []
@@ -213,8 +213,24 @@ def thits (player1_data_round, player2_data_round):
     result = unsorted[:, np.argsort(unsorted[1, :])]
     return result
 
-#def ttd(tlos, thits):
-    
+def ttd(tlos, thits):
+    ttd = []
+    time_at_sight = []
+    result = []
+    last_tlos = tlos[-1 , 0]
+    for i in range(thits.shape[1]):
+        time_at_damage = thits[1, i]
+        for j in range(tlos.shape[0]):
+            curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
+            if curr_tlos <= time_at_damage:
+                if curr_tlos > last_tlos:
+                    time_at_sight = last_tlos
+                    ttd = time_at_damage - time_at_sight
+                last_tlos = curr_tlos
+        result.append((ttd, time_at_sight))
+    return result
+        
+        
 
 
 
@@ -245,6 +261,7 @@ player2_data_rounds = split_log(player2_data)
 y = sum_angles_near_timestamp(player1_data_rounds[35], player2_data_rounds[35])
 z = tlos(y)
 w = thits(player1_data_rounds[35], player2_data_rounds[35])
+ttd = ttd(z, w)
             
 
     
