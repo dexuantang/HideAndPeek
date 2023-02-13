@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import numpy as np
 from scipy.signal import argrelextrema
 
-corner_coor = [28.5,46] #corner coordinate for calculating player's angle between the wall 
+corner_coor = [28.4,45.9] #corner coordinate for calculating player's angle between the wall 
 #get the latest time stamp where the sum of the angle of the two players equals to pi/2 
 #(players have line of sight when the sum of the angle is larger than 90 degrees)
 #calculate the time between first hit and latest line of sight event (this is time to damage)
@@ -25,6 +25,7 @@ def popupmsg(msg):
     B1 = ttk.Button(popup, text="Okay", command = popup.destroy)
     B1.pack()
 
+# Gets player id from file name, so it is sensitive to filepath name
 root = tk.Tk()
 root.withdraw()
 popupmsg("Please select the first client db file")
@@ -49,18 +50,21 @@ server_time = []
 list_of_role = []
 list_of_player = []
 server_data = []
+list_of_latency = []
 
 for row in data:
     id = row[1]
     time_stamp = datetime.strptime(((row[0])[11:23]),'%H:%M:%S.%f')
     role = row[14]
     player = row[2]
+    latency = row[15]
     list_of_id.append(id)
     server_time.append(time_stamp)
     list_of_role.append(role)
     list_of_player.append(player)
+    list_of_latency.append(latency)
     
-    server_data = np.array([np.array(server_time), np.array(list_of_id), np.array(list_of_player), np.array(list_of_role)])
+    server_data = np.array([np.array(server_time), np.array(list_of_id), np.array(list_of_player), np.array(list_of_role), np.array(list_of_latency)])
     server_data_peeker = server_data[:,::2]
     server_data_defender= server_data[:,1::2]
     
@@ -112,19 +116,20 @@ def read_round_id (server_data, player_time, player_id):
                 if (server_data[0, i] <= player_time[j] < server_data[0, i+1]):
                     round_id.append(server_data[1,i])
                     if (server_data[2, i] == player_id):
-                        role.append('peeker')
+                        role.append('PEEKER')
                     else:
-                        role.append('defender')
+                        role.append('DEFENDER')
             else:
                 if (server_data[0, i] <= player_time[j]):
                     round_id.append(server_data_peeker[1,i])
                     if (server_data[2, i] == player_id):
-                        role.append('peeker')
+                        role.append('PEEKER')
                     else:
-                        role.append('defender')
+                        role.append('DEFENDER')
     round_id = np.pad(round_id, (((len(player_time) - len(round_id)) ,0)), 'constant', constant_values = (-1,-1))
     role = np.pad(role, (((len(player_time) - len(role)) ,0)), 'constant', constant_values = (-1,-1))
     return [round_id , role]
+
 
 def read_hits (file):
     ## get hit data and time stamp from remote player action
@@ -165,7 +170,7 @@ def hit_converter (time_hits, player_time):
     hit_arr = np.pad(hit_arr, (((len(player_time) - len(hit_arr)) ,0)), 'constant', constant_values = (-1,-1))
     return hit_arr
 
-def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.007):
+def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.06):
     ## arrs are player_data 
     ##unfinished
     ## this is a function that should be able to match up the time stamps for summing the angles
@@ -190,7 +195,7 @@ def split_log (player_data):
         round_list.append(nround)
     return round_list
 
-def tlos (angle_sums_time, angle_threshold = 0.004):
+def tlos (angle_sums_time, angle_threshold = 0.5):
     result = []
     peek_time = 0
     for i in range(angle_sums_time.shape[0]):
@@ -213,26 +218,57 @@ def thits (player1_data_round, player2_data_round):
     result = unsorted[:, np.argsort(unsorted[1, :])]
     return result
 
+# find local minima by going backward till angle startes to increase
+# def ttd(tlos, thits):
+#     ttd = []
+#     time_at_sight = []
+#     role = []
+#     result = []
+#     round_id = []
+#     last_tlos = tlos[-1 , 0]
+#     for i in range(thits.shape[1]):
+#         time_at_damage = thits[1, i]
+#         for j in range(tlos.shape[0]):
+#             curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
+#             if time_at_damage - timedelta(0,3) <= curr_tlos <= time_at_damage:
+#                 if curr_tlos > last_tlos:
+#                     time_at_sight = curr_tlos
+#                     ttd = time_at_damage - time_at_sight
+#                     role = thits[3,i]
+#                     round_id = thits[2,i]
+#                 last_tlos = curr_tlos
+#         result.append((ttd, time_at_sight, role, round_id))
+#     return np.array(result)[1:,:]
+
+# better ttd method of finding the min value within a certain time frame
 def ttd(tlos, thits):
     ttd = []
     time_at_sight = []
+    role = []
     result = []
-    last_tlos = tlos[-1 , 0]
+    round_id = []
     for i in range(thits.shape[1]):
         time_at_damage = thits[1, i]
         for j in range(tlos.shape[0]):
             curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
-            if curr_tlos <= time_at_damage:
-                if curr_tlos > last_tlos:
-                    time_at_sight = last_tlos
-                    ttd = time_at_damage - time_at_sight
-                last_tlos = curr_tlos
-        result.append((ttd, time_at_sight))
-    return result
+            if time_at_damage - timedelta(0,0.5) <= curr_tlos <= time_at_damage:
+                time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),0]
+                angles_at_time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),1]
+                time_at_sight_idx = np.argmin(angles_at_time_frame)
+                time_at_sight = time_frame[time_at_sight_idx]   
+                ttd = time_at_damage - time_at_sight
+                role = thits[3,i]
+                round_id = thits[2,i]
+        result.append((ttd, time_at_sight, role, round_id))
+    return np.array(result)[1:,:]
         
+def add_latency(ttd, server_data):
+    lat = np.empty([1,1])
+    for i in range(ttd.shape[0]):
+        lat_idx = np.where(((server_data[1,:] == ttd[i, 3]) & (server_data[3,:] == ttd[i, 2])))
+        lat = np.append(lat,(server_data[4, lat_idx]))
+    return lat[1:]
         
-
-
 
 player1_coor = read_player_coor(file_path_1)
 player2_coor = read_player_coor(file_path_2)
@@ -258,10 +294,14 @@ player2_data = np.array([np.array(player2_angles), np.array(player2_time), np.ar
 player1_data_rounds = split_log(player1_data)
 player2_data_rounds = split_log(player2_data)
 
-y = sum_angles_near_timestamp(player1_data_rounds[35], player2_data_rounds[35])
-z = tlos(y)
-w = thits(player1_data_rounds[35], player2_data_rounds[35])
-ttd = ttd(z, w)
-            
+out = []
 
+for i in range(54):
+    y = sum_angles_near_timestamp(player1_data_rounds[i], player2_data_rounds[i])
+    z = tlos(y)
+    w = thits(player1_data_rounds[i], player2_data_rounds[i])
+    td = ttd(z, w)
+    lat = add_latency(td, server_data)
+    a = np.column_stack((td, lat))
+    out.append(a) #output is a list of np arrays, first col is ttd, secon
     

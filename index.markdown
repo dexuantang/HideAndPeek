@@ -16,7 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next match: TBA
+### Next match: Semifinals:  Wed, Feb 15 at 3 PM Gabriel Camacho, Jacob Burns
 
 
 Games will be streamed using the following Twitch links
