@@ -5,7 +5,7 @@ from tkinter import filedialog
 import math
 from datetime import datetime, timedelta
 import numpy as np
-from scipy.signal import argrelextrema
+import pandas as pd
 
 corner_coor = [28.4,45.9] #corner coordinate for calculating player's angle between the wall 
 #get the latest time stamp where the sum of the angle of the two players equals to pi/2 
@@ -37,6 +37,9 @@ client2_id = file_path_2.split("-")[7]
 popupmsg("Please select the server db file")
 file_path_3  = filedialog.askopenfilename()
 server_name = "server"
+
+popupmsg("Please select save directory")
+savedir = filedialog.askdirectory()
 
 ## Get server_data and split the data for peeker and defender. 
 ## The rows for server_data, server_data_peeker, server_data_defender are "time" "trailID" "playerID" and "role"
@@ -170,7 +173,7 @@ def hit_converter (time_hits, player_time):
     hit_arr = np.pad(hit_arr, (((len(player_time) - len(hit_arr)) ,0)), 'constant', constant_values = (-1,-1))
     return hit_arr
 
-def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.06):
+def sum_angles_near_timestamp(arr1, arr2, time_threshold=0.01):
     ## arrs are player_data 
     ##unfinished
     ## this is a function that should be able to match up the time stamps for summing the angles
@@ -195,7 +198,7 @@ def split_log (player_data):
         round_list.append(nround)
     return round_list
 
-def tlos (angle_sums_time, angle_threshold = 0.5):
+def tlos (angle_sums_time, angle_threshold = 0.04):
     result = []
     peek_time = 0
     for i in range(angle_sums_time.shape[0]):
@@ -219,55 +222,63 @@ def thits (player1_data_round, player2_data_round):
     return result
 
 # find local minima by going backward till angle startes to increase
-# def ttd(tlos, thits):
-#     ttd = []
-#     time_at_sight = []
-#     role = []
-#     result = []
-#     round_id = []
-#     last_tlos = tlos[-1 , 0]
-#     for i in range(thits.shape[1]):
-#         time_at_damage = thits[1, i]
-#         for j in range(tlos.shape[0]):
-#             curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
-#             if time_at_damage - timedelta(0,3) <= curr_tlos <= time_at_damage:
-#                 if curr_tlos > last_tlos:
-#                     time_at_sight = curr_tlos
-#                     ttd = time_at_damage - time_at_sight
-#                     role = thits[3,i]
-#                     round_id = thits[2,i]
-#                 last_tlos = curr_tlos
-#         result.append((ttd, time_at_sight, role, round_id))
-#     return np.array(result)[1:,:]
-
-# better ttd method of finding the min value within a certain time frame
 def ttd(tlos, thits):
     ttd = []
     time_at_sight = []
     role = []
     result = []
     round_id = []
+    last_angle = 10
+    flag = 0
     for i in range(thits.shape[1]):
         time_at_damage = thits[1, i]
+        flag = 0
         for j in range(tlos.shape[0]):
             curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
-            if time_at_damage - timedelta(0,0.5) <= curr_tlos <= time_at_damage:
-                time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),0]
-                angles_at_time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),1]
-                time_at_sight_idx = np.argmin(angles_at_time_frame)
-                time_at_sight = time_frame[time_at_sight_idx]   
-                ttd = time_at_damage - time_at_sight
-                role = thits[3,i]
-                round_id = thits[2,i]
+            curr_angle = tlos[((tlos.shape[0] - 1) - j),1]
+            if time_at_damage - timedelta(0,5) <= curr_tlos <= time_at_damage - timedelta(0,0.22):
+                if (curr_angle > last_angle) and (flag == 0):
+                    time_at_sight = curr_tlos
+                    ttd = time_at_damage - time_at_sight
+                    role = thits[3,i]
+                    round_id = thits[2,i]
+                    flag = 1
+                last_angle = curr_angle
         result.append((ttd, time_at_sight, role, round_id))
     return np.array(result)[1:,:]
+
+# ttd method of finding the min value within a certain time frame going backward from the time of damage
+# def ttd(tlos, thits):
+#     ttd = []
+#     time_at_sight = []
+#     role = []
+#     result = []
+#     round_id = []
+#     for i in range(thits.shape[1]):
+#         time_at_damage = thits[1, i]
+#         for j in range(tlos.shape[0]):
+#             curr_tlos = tlos[((tlos.shape[0] - 1) - j),0]
+#             if time_at_damage - timedelta(0,0.5) <= curr_tlos <= time_at_damage:
+#                 if (((tlos.shape[0] - 1) - j)-20) >= 0:
+#                     time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),0]
+#                     angles_at_time_frame = tlos[(((tlos.shape[0] - 1) - j)-20):((tlos.shape[0] - 1) - j),1]
+#                 else:
+#                     time_frame = tlos[:((tlos.shape[0] - 1) - j),0]
+#                     angles_at_time_frame = tlos[:((tlos.shape[0] - 1) - j),1]
+#                 time_at_sight_idx = np.argmin(angles_at_time_frame)
+#                 time_at_sight = time_frame[time_at_sight_idx]   
+#                 ttd = time_at_damage - time_at_sight
+#                 role = thits[3,i]
+#                 round_id = thits[2,i]
+#         result.append((ttd, time_at_sight, role, round_id))
+#     return np.array(result)[1:,:]
         
-def add_latency(ttd, server_data):
-    lat = np.empty([1,1])
-    for i in range(ttd.shape[0]):
-        lat_idx = np.where(((server_data[1,:] == ttd[i, 3]) & (server_data[3,:] == ttd[i, 2])))
-        lat = np.append(lat,(server_data[4, lat_idx]))
-    return lat[1:]
+# def add_latency(ttd, server_data):
+#     lat = np.empty([1,1])
+#     for i in range(ttd.shape[0]):
+#         lat_idx = np.where(((server_data[1,:] == ttd[i, 3]) & (server_data[3,:] == ttd[i, 2])))
+#         lat = np.append(lat,(server_data[4, lat_idx]))
+#     return lat[1:]
         
 
 player1_coor = read_player_coor(file_path_1)
@@ -297,11 +308,29 @@ player2_data_rounds = split_log(player2_data)
 out = []
 
 for i in range(54):
+
     y = sum_angles_near_timestamp(player1_data_rounds[i], player2_data_rounds[i])
     z = tlos(y)
     w = thits(player1_data_rounds[i], player2_data_rounds[i])
     td = ttd(z, w)
-    lat = add_latency(td, server_data)
-    a = np.column_stack((td, lat))
-    out.append(a) #output is a list of np arrays, first col is ttd, secon
+    # lat = add_latency(td, server_data)
+    # a = np.column_stack((td, lat))
+    out.append(td) #output is a list of 5np arrays, first col is ttd, secon
+
+peeker_ttd = np.array([])
+defender_ttd = np.array([])
+for i in range(54):
+    curr_round = out[i]
+    peeker_idx = np.where(curr_round[:, 2] == 'PEEKER')
+    peeker_ttd = np.concatenate((peeker_ttd, np.ravel(curr_round[peeker_idx, 0])))
+    defender_idx = np.where(curr_round[:, 2] == 'DEFENDER')
+    defender_ttd = np.concatenate((defender_ttd, np.ravel(curr_round[defender_idx, 0])))
+    
+d_ttd = np.ravel(np.hstack(defender_ttd))
+p_ttd = np.ravel(np.hstack(peeker_ttd))
+
+df1 = pd.DataFrame({"defender_ttd" : d_ttd})
+df2 = pd.DataFrame({"peeker_ttd" : p_ttd})
+df1.to_csv((savedir + "/defender.csv"), index=False)
+df2.to_csv((savedir + "/peeker.csv"), index=False)
     
