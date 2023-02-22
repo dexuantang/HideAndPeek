@@ -31,9 +31,11 @@ root.withdraw()
 popupmsg("Please select the first client db file")
 file_path_1 = filedialog.askopenfilename()
 client1_id = file_path_1.split("-")[7]
+client1_name = file_path_1.split("-")[8]
 popupmsg("Please select the second client db file")
 file_path_2  = filedialog.askopenfilename()
 client2_id = file_path_2.split("-")[7]
+client2_name = file_path_2.split("-")[8]
 popupmsg("Please select the server db file")
 file_path_3  = filedialog.askopenfilename()
 server_name = "server"
@@ -226,6 +228,7 @@ def ttd(tlos, thits):
     role = []
     result = []
     round_id = []
+    name = []
     last_angle = 10
     flag = 0
     for i in range(thits.shape[1]):
@@ -240,9 +243,10 @@ def ttd(tlos, thits):
                     ttd = time_at_damage - time_at_sight
                     role = thits[3,i]
                     round_id = thits[2,i]
+                    name = thits[5,i]
                     flag = 1
                 last_angle = curr_angle
-        result.append((ttd, time_at_sight, role, round_id))
+        result.append((ttd, time_at_sight, role, round_id, name))
     return np.array(result)[1:,:]
 
 # ttd method of finding the min value using numpy argmin within a certain time frame going backward from the time of damage
@@ -293,13 +297,14 @@ player1_t_h = read_hits(file_path_2)
 hit_arr_1 = hit_converter(player1_t_h, player1_time)
 hit_arr_2 = hit_converter(player2_t_h, player2_time)
 
-
+player1_name_arr =  np.repeat(client1_name, len(player1_time))
+player2_name_arr =  np.repeat(client2_name, len(player2_time))
 player1_round_id = read_round_id (server_data_peeker, player1_time, client1_id)[0]
 player1_role = read_round_id (server_data_peeker, player1_time, client1_id)[1]
-player1_data = np.array([np.array(player1_angles), np.array(player1_time), np.array(player1_round_id), np.array(player1_role), np.array(hit_arr_1)])
+player1_data = np.array([np.array(player1_angles), np.array(player1_time), np.array(player1_round_id), np.array(player1_role), np.array(hit_arr_1), player1_name_arr])
 player2_round_id = read_round_id (server_data_peeker, player2_time, client2_id)[0]
 player2_role = read_round_id (server_data_peeker, player2_time, client2_id)[1]
-player2_data = np.array([np.array(player2_angles), np.array(player2_time), np.array(player2_round_id), np.array(player2_role), np.array(hit_arr_2)])
+player2_data = np.array([np.array(player2_angles), np.array(player2_time), np.array(player2_round_id), np.array(player2_role), np.array(hit_arr_2), player2_name_arr])
 
 player1_data_rounds = split_log(player1_data)
 player2_data_rounds = split_log(player2_data)
@@ -340,22 +345,41 @@ peeker_ttd = np.array([])
 defender_ttd = np.array([])
 peeker_lat = np.array([])
 defender_lat = np.array([])
+peeker_name = np.array([])
+defender_name = np.array([])
 for i in range(54):
     curr_round = out[i]
     peeker_idx = np.where(curr_round[:, 2] == 'PEEKER')
     peeker_ttd = np.concatenate((peeker_ttd, np.ravel(curr_round[peeker_idx, [0]])))
-    peeker_lat = np.concatenate((peeker_lat, np.ravel(curr_round[peeker_idx, [4]])))
+    peeker_name = np.concatenate((peeker_name, np.ravel(curr_round[peeker_idx, [4]])))
+    peeker_lat = np.concatenate((peeker_lat, np.ravel(curr_round[peeker_idx, [5]])))
     defender_idx = np.where(curr_round[:, 2] == 'DEFENDER')
     defender_ttd = np.concatenate((defender_ttd, np.ravel(curr_round[defender_idx, [0]])))
-    defender_lat = np.concatenate((defender_lat, np.ravel(curr_round[defender_idx, [4]])))
+    defender_name = np.concatenate((defender_name, np.ravel(curr_round[defender_idx, [4]])))
+    defender_lat = np.concatenate((defender_lat, np.ravel(curr_round[defender_idx, [5]])))
     
 d_ttd = np.hstack(defender_ttd)
 p_ttd = np.hstack(peeker_ttd)
 d_lat = np.stack(defender_lat)
 p_lat = np.stack(peeker_lat)
+d_name = np.stack(defender_name)
+p_name = np.stack(peeker_name)
 
-df1 = pd.DataFrame({"defender_ttd" : d_ttd, "defender_lat": d_lat})
-df2 = pd.DataFrame({"peeker_ttd" : p_ttd, "peeker_lat": p_lat})
+p1idx1= np.where(d_name == client1_name)
+p1idx2 = np.where(p_name == client1_name)
+p1_ttd1= d_ttd[p1idx1]
+p1_ttd2= p_ttd[p1idx2]
+p1_ttda =(np.mean(p1_ttd1)+np.mean(p1_ttd2))/2
+print(client1_name, p1_ttda)
+p2idx1= np.where(d_name == client2_name)
+p2idx2= np.where(p_name == client2_name)
+p2_ttd1= d_ttd[p2idx1]
+p2_ttd2= p_ttd[p2idx2]
+p2_ttda =(np.mean(p2_ttd1)+np.mean(p2_ttd2))/2
+print(client2_name, p2_ttda)
+
+df1 = pd.DataFrame({"defender_ttd" : d_ttd, "defender_lat": d_lat, "defender_name": d_name})
+df2 = pd.DataFrame({"peeker_ttd" : p_ttd, "peeker_lat": p_lat, "peeker_name": p_name})
 df1.to_csv((savedir + "/defender.csv"), index=False)
 df2.to_csv((savedir + "/peeker.csv"), index=False)
     

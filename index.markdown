@@ -16,7 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next match: Semifinals:  Wed, Feb 20 at 11 AM Nathaniel Itty, Jonathan Palmieri
+### Next match: Finals:  Thu, Feb 23 at 3 AM Gabriel Camacho, Jonathan Palmieri
 
 
 Games will be streamed using the following Twitch links
