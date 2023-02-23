@@ -15,7 +15,6 @@ Nvidia's FPSci "Hide and Peek" Tournament
 
 ![ ]({{ page.image1 }})
 
-## Twitch Stream Links:
 ### Results: Winner: Gabriel Camacho; Runner-up: Jonathan Palmieri
 
 
