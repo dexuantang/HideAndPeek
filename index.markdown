@@ -16,7 +16,7 @@ Nvidia's FPSci "Hide and Peek" Tournament
 ![ ]({{ page.image1 }})
 
 ## Twitch Stream Links:
-### Next match: Finals:  Thu, Feb 23 at 3 PM Gabriel Camacho, Jonathan Palmieri
+### Results: Winner: Gabriel Camacho; Runner-up: Jonathan Palmieri
 
 
 Games will be streamed using the following Twitch links
