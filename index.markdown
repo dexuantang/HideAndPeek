@@ -5,6 +5,8 @@
 layout: home
 image1: /HideAndPeek/assets/nvidia.png
 image2: /HideAndPeek/assets/final.jpg
+image3: /HideAndPeek/assets/1.jpg
+image4: /HideAndPeek/assets/2.jpg
 
 
 ---
